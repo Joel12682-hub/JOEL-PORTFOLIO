@@ -4,454 +4,590 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JoelVictor | Portfolio</title>
+    <meta
+        name="description"
+        content="S Joel — Cyber Security Student, Developer and Technology Enthusiast."
+    >
+
+    <title>joelvicor</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-  <!-- Navigation -->
-<header class="navbar">
+    <!-- Cursor glow -->
+    <div class="cursor-glow"></div>
 
-    <div class="logo">
-        S <span>JOEL</span>
-    </div>
+    <!-- Background atmosphere -->
+    <div class="ambient ambient-red"></div>
+    <div class="ambient ambient-blue"></div>
 
-    <button class="menu-toggle" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <!-- Click spark container -->
+    <div id="spark-container"></div>
 
-    <nav>
+    <!-- ================= NAVBAR ================= -->
 
-        <a href="#home">Home</a>
+    <header class="navbar">
 
-        <a href="#about">About</a>
+        <div class="nav-container">
 
-        <a href="#projects">Projects</a>
-
-        <a href="#contact">Contact</a>
-
-    </nav>
-
-</header>
-
-    <!-- Home -->
-    <!-- Home -->
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <p class="intro">HELLO, I'M</p>
-
-        <h1>S JOEL</h1>
-
-        <h2>
-            B.E. CSE <span>(Cyber Security)</span> Student
-        </h2>
-
-        <p class="hero-description">
-            A passionate student interested in programming,
-            cybersecurity and building practical projects.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects" class="btn primary-btn">
-                View Projects
+            <a href="#home" class="logo">
+                <span>S</span> JOEL
             </a>
 
-            <a href="#contact" class="btn secondary-btn">
-                Contact Me
-            </a>
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#home" class="nav-link active">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#achievements" class="nav-link">ACHIEVEMENTS</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+
+            </nav>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
 
         </div>
 
-    </div>
+    </header>
 
 
-    <!-- Floating Identity Card -->
+    <main>
 
-    <div class="hero-card">
+        <!-- ================= HOME ================= -->
 
-        <div class="hero-card-glow"></div>
+        <section id="home" class="hero section">
 
-        <div class="hero-card-content">
+            <div class="hero-container">
 
-            <div class="hero-card-top">
-                <span>SJ</span>
-                <span>2026</span>
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span></span>
+                        CYBER SECURITY • DEVELOPMENT
+                    </div>
+
+                    <h1>
+                        S <span>JOEL</span>
+                    </h1>
+                    <h2>
+                        COMPUTER SCIENCE &
+                        <span>CYBER SECURITY</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Second-year B.E. CSE (Cyber Security) student
+                        passionate about Python, cybersecurity and
+                        building practical technology solutions.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+                            VIEW PROJECTS
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            CONTACT ME
+                        </a>
+
+                    </div>
+
+                    <div class="hero-meta">
+
+                        <div>
+                            <strong>2ND</strong>
+                            <span>YEAR</span>
+                        </div>
+
+                        <div>
+                            <strong>PYTHON</strong>
+                            <span>PRIMARY LANGUAGE</span>
+                        </div>
+
+                        <div>
+                            <strong>CYBER</strong>
+                            <span>FOCUS</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero visual -->
+
+                <div class="hero-visual">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="hero-glass-card">
+
+                        <div class="card-header">
+                            <span>PORTFOLIO</span>
+                            <span>2026</span>
+                        </div>
+
+                        <div class="card-symbol">
+                            SJ
+                        </div>
+
+                        <div class="card-title">
+                            JOEL
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="card-info">
+
+                            <div>
+                                <span>EDUCATION</span>
+                                <strong>SRI SAIRAM ENGINEERING COLLEGE</strong>
+                            </div>
+
+                            <div>
+                                <span>PROGRAM</span>
+                                <strong>B.E. CSE — CYBER SECURITY</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer">
+                            <span>PYTHON</span>
+                            <span>SECURITY</span>
+                            <span>2026</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="hero-card-name">
-                <span>JOEL</span>
-            </div>
+        </section>
 
-            <div class="hero-card-line"></div>
 
-            <div class="hero-card-info">
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <div class="section-heading">
 
                 <div>
-                    <small>FIELD</small>
-                    <strong>COMPUTER SCIENCE</strong>
+                    <p class="section-label">01 / PROFILE</p>
+
+                    <h2>
+                        ABOUT <span>ME</span>
+                    </h2>
                 </div>
 
-                <div>
-                    <small>FOCUS</small>
-                    <strong>CYBER SECURITY</strong>
-                </div>
+                <p class="section-intro">
+                    A student focused on learning, building and
+                    exploring cybersecurity through practical work.
+                </p>
 
             </div>
 
-            <div class="hero-card-footer">
-                <span>PYTHON</span>
-                <span>STUDENT</span>
-            </div>
 
-        </div>
+            <div class="about-layout">
 
-    </div>
+                <div class="glass-panel about-main">
 
-</section>
+                    <span class="panel-number">01</span>
 
-    <!-- About -->
-    <!-- About -->
-<section id="about" class="section">
+                    <h3>
+                        BUILDING WITH<br>
+                        <span>PURPOSE.</span>
+                    </h3>
 
-    <div class="section-title">
+                    <p>
+                        I'm S Joel, a second-year B.E. Computer Science
+                        and Engineering student specializing in Cyber
+                        Security at Sri Sairam Engineering College.
+                    </p>
 
-        <p>A LITTLE ABOUT ME</p>
+                    <p>
+                        I enjoy working with Python, exploring
+                        cybersecurity concepts and developing projects
+                        that turn technical ideas into practical
+                        solutions.
+                    </p>
 
-        <h2>About <span>Me</span></h2>
-
-    </div>
-
-
-    <div class="about-container">
-
-        <!-- About Introduction -->
-
-        <div class="glass-card about-card">
-
-            <div class="about-label">
-                WHO I AM
-            </div>
-
-            <h3>
-                Learning today.
-                <span>Building tomorrow.</span>
-            </h3>
-
-            <p>
-                I'm S Joel, a second-year B.E. Computer Science
-                and Engineering student specializing in Cyber
-                Security at Sri Sairam Engineering College.
-            </p>
-
-            <p>
-                I'm passionate about programming and enjoy
-                turning ideas into practical projects. I'm
-                currently strengthening my programming skills
-                with Python while exploring cybersecurity and
-                different areas of computer science.
-            </p>
-
-            <p>
-                I believe that the best way to learn technology
-                is by building things, experimenting with ideas,
-                and continuously improving.
-            </p>
-
-
-            <div class="about-highlight">
-
-                <div>
-                    <strong>2ND</strong>
-                    <span>YEAR STUDENT</span>
                 </div>
 
-                <div>
-                    <strong>01</strong>
-                    <span>MAJOR PROJECT</span>
-                </div>
 
-                <div>
-                    <strong>01</strong>
-                    <span>CORE LANGUAGE</span>
-                </div>
+                <div class="about-side">
 
-            </div>
+                    <div class="glass-panel mini-panel">
 
-        </div>
+                        <span class="mini-label">EDUCATION</span>
 
-
-        <!-- Education & Skills -->
-
-        <div class="about-side">
-
-            <div class="glass-card education-card">
-
-                <div class="about-label">
-                    EDUCATION
-                </div>
-
-                <div class="education-item">
-
-                    <div class="education-dot"></div>
-
-                    <div>
-
-                        <h4>
-                            Sri Sairam Engineering College
-                        </h4>
+                        <h3>
+                            B.E. CSE
+                        </h3>
 
                         <p>
-                            B.E. Computer Science and
-                            Engineering
+                            Cyber Security
                         </p>
+
+                    </div>
+
+
+                    <div class="glass-panel mini-panel">
+
+                        <span class="mini-label">CURRENT YEAR</span>
+
+                        <h3>
+                            2ND YEAR
+                        </h3>
 
                         <p>
-                            Specialization: Cyber Security
+                            Undergraduate
                         </p>
 
-                        <span>
-                            2nd Year • 2026 – Present
+                    </div>
+
+
+                    <div class="glass-panel mini-panel">
+
+                        <span class="mini-label">PRIMARY SKILL</span>
+
+                        <h3>
+                            PYTHON
+                        </h3>
+
+                        <p>
+                            Programming
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">02 / WORK</p>
+
+                    <h2>
+                        SELECTED <span>PROJECTS</span>
+                    </h2>
+                </div>
+
+                <p class="section-intro">
+                    Projects built while exploring programming,
+                    cybersecurity and real-world problem solving.
+                </p>
+
+            </div>
+
+
+            <div class="projects-layout">
+
+
+                <!-- Main project -->
+
+                <article class="project-feature glass-panel">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            PROJECT / 01
                         </span>
 
+                        <i class="fas fa-shield-halved"></i>
+
                     </div>
 
-                </div>
+                    <div class="project-body">
 
-            </div>
+                        <span class="project-category">
+                            CYBER SECURITY
+                        </span>
 
-
-            <div class="glass-card skills-card">
-
-                <div class="about-label">
-                    CURRENT SKILLS
-                </div>
-
-                <div class="skill-list">
-
-                    <span>Python</span>
-
-                    <span>Cyber Security</span>
-
-                    <span>Problem Solving</span>
-
-                    <span>Web Development</span>
-
-                </div>
-
-
-                <div class="learning">
-
-                    <small>
-                        CURRENTLY EXPLORING
-                    </small>
-
-                    <div class="learning-line">
-
-                        <span></span>
+                        <h3>
+                            AIR-GAP-<span>SENTINEL</span>
+                        </h3>
 
                         <p>
-                            Building practical projects
-                            and expanding my technical skills.
+                            A cybersecurity-focused project centered
+                            around security monitoring, log collection,
+                            detection and identifying suspicious
+                            activity.
                         </p>
 
+                        <div class="tags">
+
+                            <span>PYTHON</span>
+                            <span>SECURITY</span>
+                            <span>MONITORING</span>
+
+                        </div>
+
+                        <a
+                            href="https://github.com/Joel12682-hub"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-link"
+                        >
+                            VIEW ON GITHUB
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Coming soon -->
+
+                <article class="project-secondary glass-panel">
+
+                    <div class="project-number">
+                        PROJECT / 02
+                    </div>
+
+                    <div class="coming-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <span class="project-category">
+                        IN DEVELOPMENT
+                    </span>
+
+                    <h3>
+                        MORE PROJECTS
+                        <span>COMING SOON</span>
+                    </h3>
+
+                    <p>
+                        Currently exploring new ideas and technologies
+                        to expand my development portfolio.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACHIEVEMENTS ================= -->
+
+        <section id="achievements" class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">03 / MILESTONES</p>
+
+                    <h2>
+                        MY <span>ACHIEVEMENTS</span>
+                    </h2>
+                </div>
+
+                <p class="section-intro">
+                    Milestones and experiences from my academic and
+                    technical journey.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-feature glass-panel">
+
+                <div class="achievement-mark">
+                    <i class="fas fa-trophy"></i>
+                </div>
+
+
+                <div class="achievement-content">
+
+                    <div class="achievement-meta">
+                        HACKATHON • 2026
+                    </div>
+
+                    <h3>
+                        IEEE EU-REKA <span>2026</span>
+                    </h3>
+
+                    <div class="achievement-status">
+                        FINALIST
+                    </div>
+
+                    <p>
+                        Selected as a finalist of EU-REKA 2026,
+                        organized under IEEE Pune Section, in
+                        recognition of innovation, creativity and
+                        dedication throughout the competition.
+                    </p>
+
+                    <a
+                        href="certificate.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="certificate-button"
+                    >
+                        <i class="fas fa-certificate"></i>
+                        VIEW CERTIFICATE
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="achievement-side">
+
+                    <div>
+                        <span>EVENT</span>
+                        <strong>EU-REKA 2026</strong>
+                    </div>
+
+                    <div>
+                        <span>LEVEL</span>
+                        <strong>NATIONAL</strong>
+                    </div>
+
+                    <div>
+                        <span>ORGANIZED UNDER</span>
+                        <strong>IEEE PUNE SECTION</strong>
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-    <!-- Projects -->
-    <!-- Projects -->
-<section id="projects" class="section">
+        <!-- ================= CONTACT ================= -->
 
-    <div class="section-title">
+        <section id="contact" class="section contact-section">
 
-        <p>WHAT I'VE BUILT</p>
+            <div class="section-heading">
 
-        <h2>Featured <span>Project</span></h2>
+                <div>
+                    <p class="section-label">04 / CONNECT</p>
 
-    </div>
-
-
-    <div class="projects-container">
-
-        <!-- Air-Gap Sentinel -->
-
-        <div class="glass-card project-card">
-
-            <div class="project-header">
-
-                <span class="project-number">
-                    01
-                </span>
-
-                <span class="project-status">
-                    ACTIVE PROJECT
-                </span>
-
-            </div>
-
-
-            <div class="project-visual">
-
-                <div class="project-orbit orbit-one"></div>
-
-                <div class="project-orbit orbit-two"></div>
-
-                <div class="project-core">
-                    AG
+                    <h2>
+                        LET'S <span>CONNECT</span>
+                    </h2>
                 </div>
 
-            </div>
-
-
-            <div class="project-content">
-
-                <h3>
-                    Air-Gap Sentinel
-                </h3>
-
-                <p>
-                    A security-focused monitoring and detection
-                    system designed to identify suspicious
-                    activities in an air-gapped environment.
+                <p class="section-intro">
+                    Have an idea, project or opportunity?
+                    Feel free to reach out.
                 </p>
 
-
-                <div class="project-tech">
-
-                    <span>Python</span>
-
-                    <span>Cyber Security</span>
-
-                    <span>FastAPI</span>
-
-                </div>
-
-
-                <div class="project-footer">
-
-                    <a
-                        href="https://github.com/Joel12682-hub"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View on GitHub →
-                    </a>
-
-                    <span class="project-year">
-                        2026
-                    </span>
-
-                </div>
-
             </div>
 
-        </div>
 
-    </div>
-
-</section>
-
-
-    <!-- Contact -->
-    <!-- Contact -->
-<section id="contact" class="section contact-section">
-
-    <div class="section-title">
-
-        <p>GET IN TOUCH</p>
-
-        <h2>Let's <span>Connect</span></h2>
-
-    </div>
-
-
-    <div class="contact-wrapper">
-
-        <div class="glass-card contact-card">
-
-            <div class="contact-glow"></div>
-
-            <div class="contact-content">
-
-                <div class="contact-label">
-                    CONTACT ME
-                </div>
-
-                <h3>
-                    Have an idea,
-                    <span>let's talk.</span>
-                </h3>
-
-                <p>
-                    Whether you want to discuss a project,
-                    technology, or simply connect with me,
-                    feel free to reach out.
-                </p>
+            <div class="contact-grid">
 
 
                 <a
                     href="mailto:joelsupreme2007@gmail.com"
-                    class="email-button"
+                    class="contact-card glass-panel"
                 >
-                    <span>joelsupreme2007@gmail.com</span>
-                    <strong>→</strong>
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <span>EMAIL</span>
+                        <h3>JOELSUPREME2007@GMAIL.COM</h3>
+                    </div>
+
+                    <i class="fas fa-arrow-up-right-from-square contact-arrow"></i>
+
                 </a>
 
 
-                <div class="contact-socials">
+                <a
+                    href="https://github.com/Joel12682-hub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card glass-panel"
+                >
 
-                    <a
-                        href="https://github.com/Joel12682-hub"
-                        target="_blank"
-                    >
-                        <span>GitHub</span>
-                        <strong>↗</strong>
-                    </a>
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
 
-                    <a
-                        href="https://www.linkedin.com/in/joel-s-553457383/"
-                        target="_blank"
-                    >
-                        <span>LinkedIn</span>
-                        <strong>↗</strong>
-                    </a>
+                    <div>
+                        <span>GITHUB</span>
+                        <h3>JOEL12682-HUB</h3>
+                    </div>
 
-                </div>
+                    <i class="fas fa-arrow-up-right-from-square contact-arrow"></i>
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/joel-s-553457383"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card glass-panel"
+                >
+
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+
+                    <div>
+                        <span>LINKEDIN</span>
+                        <h3>S JOEL</h3>
+                    </div>
+
+                    <i class="fas fa-arrow-up-right-from-square contact-arrow"></i>
+
+                </a>
 
             </div>
 
-        </div>
+        </section>
 
-    </div>
-
-</section>
-              
-    
+    </main>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
-        <p>
-            © 2026 S Joel. All rights reserved.
-        </p>
+        <div class="footer-inner">
+
+            <span>S JOEL</span>
+
+            <p>
+                © 2026 — BUILT WITH PURPOSE.
+            </p>
+
+        </div>
 
     </footer>
 
