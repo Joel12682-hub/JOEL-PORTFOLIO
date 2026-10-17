@@ -105,9 +105,9 @@
                     </p>
 
                     <p class="hero-description">
-                        A computer science student focused on
+                            A computer science student focused on
                         cybersecurity, programming and building
-                        practical technology solutions.
+                        practical technology solutions
                     </p>
 
                     <div class="hero-buttons">
@@ -125,7 +125,7 @@
                     <div class="hero-meta">
 
                         <div>
-                            <span class="meta-number">02</span>
+                            <span class="meta-number">2nd</span>
                             <span class="meta-label">
                                 YEAR
                             </span>
@@ -164,7 +164,7 @@
                         <div class="portrait-image-wrapper">
 
                             <img
-                                src="profile.png"
+                                src="JOEL PFP.png"
                                 alt="S Joel"
                                 class="portrait-image"
                             >
@@ -172,7 +172,7 @@
                         </div>
 
                         <div class="portrait-number">
-                            01
+                            
                         </div>
 
                         <div class="portrait-caption">
@@ -187,20 +187,21 @@
             </div>
 
             <div class="hero-scroll">
-                <span>SCROLL TO EXPLORE</span>
+                <span></span>
                 <div class="scroll-line"></div>
             </div>
 
         </section>
 
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
+ 
+<!-- =========================
+     ABOUT
+========================== -->
 
-        <section id="about" class="about">
+<section id="about" class="about">
     <div class="section-header">
-        <span class="section-number">02</span>
+        <span class="section-number"></span>
         <span class="section-line"></span>
         <span class="section-label">ABOUT</span>
     </div>
@@ -214,8 +215,17 @@
             <h2>
                 BUILDING<br>
                 WITH<br>
-                <span>PURPOSE.</span>
+                <span>PURPOSE</span>
             </h2>
+
+            <!-- SECOND PHOTO -->
+            <div class="about-photo">
+                <img
+                    src="JOEL PFP2.jpeg"
+                    alt="Joel in formal attire"
+                    loading="lazy"
+                >
+            </div>
         </div>
 
         <!-- RIGHT SIDE -->
@@ -245,7 +255,7 @@
 
                 <div class="about-detail">
                     <span class="detail-label">EDUCATION</span>
-                    <span class="detail-value">B.E. CSE(CYBER SECURITY)</span>
+                    <span class="detail-value">B.E. CSE (CYBER SECURITY)</span>
                 </div>
 
                 <div class="about-detail">
@@ -267,8 +277,6 @@
         </div>
     </div>
 </section>
-                         
-
 
         <!-- =========================
              PROJECTS
@@ -276,7 +284,7 @@
 <section id="projects" class="projects">
 
     <div class="section-header">
-        <span class="section-number">03</span>
+        <span class="section-number"></span>
         <span class="section-line"></span>
         <span class="section-label">PROJECTS</span>
     </div>
@@ -342,13 +350,14 @@
 
 </section>
 
-        <!-- =========================
-             ACHIEVEMENTS
-        ========================== -->
+<!-- =========================
+     ACHIEVEMENTS
+========================== -->
+
 <section id="achievements" class="achievements">
 
     <div class="section-header">
-        <span class="section-number">04</span>
+        <span class="section-number"></span>
         <span class="section-line"></span>
         <span class="section-label">ACHIEVEMENTS</span>
     </div>
@@ -361,17 +370,15 @@
             </span>
 
             <h2>
-                LEARNING.<br>
-                <span>BUILDING.</span><br>
-                GROWING.
+                LEARNING<br>
+                <span>BUILDING</span><br>
+                GROWING
             </h2>
         </div>
 
         <article class="achievement-item">
 
-            <div class="achievement-number">
-                01
-            </div>
+            <div class="achievement-number">01</div>
 
             <div class="achievement-main">
 
@@ -394,15 +401,32 @@
 
                 </div>
 
-                <p class="achievement-description">
-                    Participated in a national-level hackathon held in
-                    Pune, gaining practical experience in problem solving,
-                    teamwork, innovation and developing technology-based
-                    solutions under a competitive environment.
-                </p>
+                <!-- Description left, photo right -->
+                <div class="achievement-content-row">
+
+                    <p class="achievement-description">
+                            Participated as a finalist in a national-level hackathon held in Pune, collaborating with a team to develop innovative, technology-driven solutions under competitive conditions. The experience strengthened my problem-solving, critical thinking, teamwork, and technical development skills while challenging me to approach real-world problems creatively. It also provided valuable exposure to rapid prototyping, idea presentation, collaborative decision-making, and working under time constraints. Reaching the finalist stage was a valuable milestone in my journey as a computer science and cybersecurity student, motivating me to continue building practical solutions and exploring emerging technologies.
+                    </p>
+
+                    <button
+                        class="ieee-photo-trigger"
+                        type="button"
+                        onclick="openTeamPhoto()"
+                        aria-label="Expand IEEE team photo"
+                    >
+                        <img
+                            src="ieee-team.jpeg"
+                            alt="Our IEEE hackathon team"
+                            loading="lazy"
+                        >
+
+                        <span>VIEW TEAM ↗</span>
+                    </button>
+
+                </div>
 
                 <a
-                    href="certificate.pdf"
+                    href="JOEL S_IEEE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="certificate-link"
@@ -418,6 +442,40 @@
     </div>
 
 </section>
+
+<!-- Expanded team photo popup -->
+<div
+    id="teamPhotoModal"
+    class="team-photo-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded IEEE team photo"
+    aria-hidden="true"
+    onclick="closeTeamPhoto()"
+>
+    <button
+        class="team-photo-close"
+        type="button"
+        onclick="closeTeamPhoto()"
+        aria-label="Close photo"
+    >
+        &times;
+    </button>
+
+    <div
+        class="neon-photo-frame"
+        onclick="event.stopPropagation()"
+    >
+        <img
+            src="ieee-team.jpeg"
+            alt="Our IEEE hackathon team enlarged"
+        >
+
+        <p>
+            IEEE TEAM <span>✦</span> HACKATHON MEMORIES
+        </p>
+    </div>
+</div>
 
         <!-- =========================
              CONTACT

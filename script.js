@@ -167,44 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-    /* =====================================================
-       CURSOR GLOW
-       ===================================================== */
-
-    const cursorGlow = document.createElement("div");
-
-    cursorGlow.className = "cursor-glow";
-
-    document.body.appendChild(cursorGlow);
-
-    let mouseX = 0;
-    let mouseY = 0;
-
-    let glowX = 0;
-    let glowY = 0;
-
-    document.addEventListener("mousemove", (event) => {
-
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-
-    });
-
-
-    function animateCursor() {
-
-        glowX += (mouseX - glowX) * 0.12;
-        glowY += (mouseY - glowY) * 0.12;
-
-        cursorGlow.style.transform =
-            `translate3d(${glowX}px, ${glowY}px, 0)`;
-
-        requestAnimationFrame(animateCursor);
-
-    }
-
-    animateCursor();
-
 
     /* =====================================================
        CLICK SPARKLES
@@ -415,3 +377,43 @@ if (navbar) {
     });
 
 }
+
+function openTeamPhoto() {
+    const modal = document.getElementById("teamPhotoModal");
+    if (!modal) return;
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleTeamPhotoKey);
+}
+
+function openTeamPhoto() {
+    const modal = document.getElementById("teamPhotoModal");
+
+    if (!modal) {
+        console.error("Team photo popup element not found.");
+        return;
+    }
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
+
+function closeTeamPhoto() {
+    const modal = document.getElementById("teamPhotoModal");
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function (event) {
+    const modal = document.getElementById("teamPhotoModal");
+
+    if (event.key === "Escape" && modal?.classList.contains("active")) {
+        closeTeamPhoto();
+    }
+});

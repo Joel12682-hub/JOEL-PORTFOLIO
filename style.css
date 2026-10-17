@@ -3048,3 +3048,1042 @@ html {
     }
 
 }
+
+/* ===== JOEL PORTFOLIO REDESIGN ===== */
+
+:root {
+    --neon: #A3FF12;
+    --neon-soft: rgba(163, 255, 18, 0.14);
+}
+
+/* Smaller, cleaner text */
+body {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.nav-link {
+    font-size: 13px;
+}
+
+.hero-description,
+.about-intro p,
+.project-description,
+.contact-description {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* Compact section labels */
+.section-label,
+.section-number,
+.detail-label,
+.about-eyebrow,
+.projects-eyebrow {
+    font-size: 12px;
+}
+
+/* Keep the main name prominent */
+.hero-title {
+    font-size: clamp(56px, 7vw, 100px);
+}
+
+/* Reduce secondary heading sizes */
+.about-heading h2,
+.projects-intro h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    line-height: 1.1;
+}
+
+.project-heading h3,
+.detail-value {
+    font-size: 16px;
+}
+
+/* Subtle neon borders on selected cards */
+.about-detail,
+.project-item,
+.portrait-frame {
+    border: 1px solid rgba(163, 255, 18, 0.16);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Restrained glow on hover */
+.about-detail:hover,
+.project-item:hover,
+.portrait-frame:hover {
+    border-color: rgba(163, 255, 18, 0.65);
+    box-shadow: 0 0 18px var(--neon-soft);
+}
+
+/* Neon accent for interactive details */
+.nav-link:hover,
+.nav-link.active,
+.project-link:hover {
+    color: var(--neon);
+}
+
+.nav-link::after {
+    background: var(--neon);
+}
+
+.hero-line {
+    background: var(--neon);
+    opacity: 0.7;
+}
+
+.btn-secondary:hover {
+    border-color: var(--neon);
+    color: var(--neon);
+    box-shadow: 0 0 14px var(--neon-soft);
+}
+
+/* Make the mobile layout comfortable */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(52px, 14vw, 78px);
+    }
+
+    .about-heading h2,
+    .projects-intro h2 {
+        font-size: 28px;
+    }
+
+    .hero-description,
+    .about-intro p,
+    .project-description {
+        font-size: 14px;
+    }
+}
+
+/* ABOUT SECOND PHOTO */
+
+.about-photo {
+    width: min(100%, 280px);
+    margin-top: 28px;
+    padding: 6px;
+    border: 1px solid rgba(163, 255, 18, 0.35);
+    border-radius: 14px;
+    background: #151515;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 9px;
+    filter: grayscale(15%);
+}
+
+.about-photo:hover {
+    border-color: #A3FF12;
+    box-shadow: 0 0 20px rgba(163, 255, 18, 0.12);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .about-photo {
+        width: min(100%, 240px);
+        margin-top: 22px;
+    }
+}
+
+/* ===== SUBTLE PORTFOLIO ANIMATIONS ===== */
+
+.about-detail,
+.project-item,
+.about-photo,
+.btn-secondary,
+.project-link {
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+/* Slight lift when hovering over cards */
+.about-detail:hover,
+.project-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Subtle image interaction */
+.about-photo:hover {
+    transform: translateY(-3px);
+}
+
+/* Smooth link feedback */
+.project-link:hover {
+    letter-spacing: 0.3px;
+}
+
+/* Respect users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== REDUCE SECTION SPACING ===== */
+
+section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+section#home,
+section.hero {
+    padding-bottom: 35px;
+}
+
+.section-header {
+    margin-bottom: 28px;
+}
+
+.about-container,
+.projects-container,
+.contact-container {
+    gap: 28px;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 38px;
+        padding-bottom: 38px;
+    }
+
+    .section-header {
+        margin-bottom: 20px;
+    }
+}
+
+/* ===== CONSISTENT PORTFOLIO SIZING ===== */
+
+:root {
+    --neon: #A3FF12;
+
+    --text-body: 14px;
+    --text-small: 12px;
+    --text-nav: 13px;
+    --heading-section: clamp(26px, 3vw, 34px);
+    --heading-card: 16px;
+}
+
+/* Consistent base text */
+body {
+    font-size: var(--text-body);
+    line-height: 1.7;
+}
+
+p,
+.about-description,
+.project-description,
+.contact-description {
+    font-size: var(--text-body);
+    line-height: 1.7;
+}
+
+.section-label,
+.section-number,
+.about-eyebrow,
+small {
+    font-size: var(--text-small);
+}
+
+/* Same heading scale across sections */
+.about-heading h2,
+.projects-heading h2,
+.achievements-heading h2,
+.contact-heading h2,
+.section-title {
+    font-size: var(--heading-section);
+    line-height: 1.2;
+}
+
+/* Consistent card headings */
+.project-item h3,
+.about-detail h3,
+.achievement-item h3,
+.contact-item h3 {
+    font-size: var(--heading-card);
+    line-height: 1.4;
+}
+
+/* Equal spacing between sections */
+section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.section-header {
+    margin-bottom: 26px;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    section {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .about-heading h2,
+    .projects-heading h2,
+    .achievements-heading h2,
+    .contact-heading h2,
+    .section-title {
+        font-size: 26px;
+    }
+}
+
+/* ==========================================
+   GLOBAL TYPOGRAPHY AND SPACING
+   BLACK / GREY / NEON LIME
+========================================== */
+
+:root {
+    --neon: #A3FF12;
+    --heading-size: 18px;
+    --body-size: 14px;
+    --nav-size: 13px;
+}
+
+/* Consistent font and text rendering */
+body {
+    font-size: var(--body-size);
+    line-height: 1.7;
+}
+
+/* ALL section headings */
+section h2,
+section h3,
+section h4,
+.section-title,
+.section-heading,
+.about-heading h2,
+.projects-intro h2,
+.contact-heading h2,
+.achievements-heading h2 {
+    font-size: var(--heading-size);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+/* Keep the main hero heading distinct */
+.hero-title {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+}
+
+/* All paragraphs and descriptive text */
+section p,
+section li,
+.about-intro,
+.project-description,
+.contact-description {
+    font-size: var(--body-size);
+    line-height: 1.7;
+}
+
+/* Labels and section numbers */
+.section-label,
+.section-number,
+.section-header span,
+.detail-label,
+.about-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+/* Consistent navigation spacing */
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    font-size: var(--nav-size);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+/* Consistent spacing between sections */
+section {
+    padding-block: 48px;
+    scroll-margin-top: 80px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+/* Consistent card headings */
+.project-item h3,
+.about-detail .detail-value,
+.achievement-card h3 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    section {
+        padding-block: 32px;
+    }
+
+    nav ul {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(38px, 10vw, 52px);
+    }
+
+    section h2,
+    section h3,
+    section h4,
+    .section-title,
+    .section-heading {
+        line-height: 1.4;
+    }
+}
+    
+/* ===== GLOBAL HEADING FIX ===== */
+
+/* Apply consistent, readable spacing to all real headings */
+h1, h2, h3, h4, h5, h6 {
+    word-spacing: 0.16em !important;
+    line-height: 1.2;
+}
+
+/* Achievement titles — including NATIONAL LEVEL HACKATHON */
+.achievement-heading h3,
+.achievement-content h3 {
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    word-spacing: 0.16em !important;
+    line-height: 1.25;
+}
+
+/* Project titles */
+.project-heading h3,
+.project-info h3,
+.project-content h3 {
+    word-spacing: 0.12em !important;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+}
+
+/* Main section headings */
+.about-heading h2,
+.projects-header h2,
+.achievements-header h2,
+.contact-main h2,
+.section-header h2 {
+    word-spacing: 0.12em !important;
+    line-height: 1.1;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .achievement-heading h3,
+    .achievement-content h3 {
+        font-size: 30px;
+        line-height: 1.3;
+        word-spacing: 0.12em !important;
+    }
+}
+
+
+/* Keep headings readable on mobile */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+        word-spacing: 0.1em !important;
+        line-height: 1.4;
+    }
+}
+
+
+/* ===== FINAL NAVIGATION + HEADING SIZE ADJUSTMENT ===== */
+
+/* Reduce gaps between navigation tabs */
+.nav-links {
+    gap: 24px !important;
+}
+
+.nav-link {
+    font-size: 11px !important;
+    letter-spacing: 0.12em;
+}
+
+/* Make major section headings consistent and more compact */
+.about-heading h2,
+.projects-header h2,
+.achievements-header h2,
+.contact-main h2 {
+    font-size: clamp(38px, 4.5vw, 64px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    word-spacing: normal !important;
+}
+
+/* Match project and achievement titles more closely */
+.project-info h3,
+.project-content h3,
+.achievement-content h3,
+.achievement-heading h3 {
+    font-size: clamp(24px, 2.5vw, 34px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+}
+
+/* Keep navigation compact on mobile */
+@media (max-width: 700px) {
+    .nav-links {
+        gap: 18px !important;
+    }
+
+    .nav-link {
+        font-size: 11px !important;
+    }
+
+    .about-heading h2,
+    .projects-header h2,
+    .achievements-header h2,
+    .contact-main h2 {
+        font-size: clamp(34px, 10vw, 48px) !important;
+    }
+}
+
+
+/* ===== REDUCE EMPTY SPACE THROUGHOUT THE WEBSITE ===== */
+
+/* Reduce top and bottom space inside each section */
+section {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+}
+
+/* Reduce space below section labels */
+.section-header {
+    margin-bottom: 18px !important;
+}
+
+/* Reduce gaps between content columns */
+.about-container,
+.projects-container,
+.contact-container,
+.achievements-container {
+    gap: 24px !important;
+}
+
+/* Reduce space between project and achievement items */
+.project-item,
+.achievement-item,
+.achievement-card {
+    margin-bottom: 18px !important;
+}
+
+/* Reduce excessive spacing around major headings */
+.about-heading,
+.projects-intro,
+.achievements-intro {
+    margin-bottom: 16px !important;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+    section {
+        padding-top: 22px !important;
+        padding-bottom: 22px !important;
+    }
+
+    .section-header {
+        margin-bottom: 14px !important;
+    }
+
+    .about-container,
+    .projects-container,
+    .contact-container,
+    .achievements-container {
+        gap: 18px !important;
+    }
+}
+
+/* ===== FIX ACHIEVEMENT CONTENT SIZE ===== */
+
+.achievement-heading h3,
+.achievement-content h3 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+}
+
+.achievement-content p,
+.achievement-description {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+}
+
+.achievement-item,
+.achievement-card {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+.achievement-link {
+    font-size: 11px !important;
+}
+
+/* ===== PREVENT TOP CONTENT FROM BEING CUT OFF ===== */
+
+/* Add clearance below the fixed navigation */
+section {
+    scroll-margin-top: 100px;
+}
+
+#about {
+    padding-top: 100px !important;
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding-top: 80px !important;
+    }
+
+    .achievement-heading h3,
+    .achievement-content h3 {
+        font-size: 21px !important;
+    }
+}
+
+/* Reduce the Learning. Building. Growing. heading */
+.projects-intro h2,
+.projects-heading h2 {
+    font-size: clamp(28px, 3.5vw, 42px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    word-spacing: normal !important;
+}
+
+@media (max-width: 768px) {
+    .projects-intro h2,
+    .projects-heading h2 {
+        font-size: 30px !important;
+    }
+}
+/* FORCE the Learning. Building. Growing. heading smaller */
+.projects-intro h2,
+.projects-intro h2 span,
+.projects-heading h2,
+.projects-heading h2 span {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -1px !important;
+    word-spacing: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .projects-intro h2,
+    .projects-intro h2 span,
+    .projects-heading h2,
+    .projects-heading h2 span {
+        font-size: 20px !important;
+    }
+}
+
+/* Fix the Learning. Building. Growing. heading */
+.achievements-intro h2,
+.achievements-intro h2 span {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1px !important;
+}
+
+@media (max-width: 700px) {
+    .achievements-intro h2,
+    .achievements-intro h2 span {
+        font-size: 26px !important;
+    }
+}
+```css
+/* FIX: Keep photo beside description in the SAME achievement */
+
+#achievements .achievement-content-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 220px !important;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+}
+
+#achievements .achievement-content-row .achievement-description {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    margin: 20px 0;
+}
+
+#achievements .achievement-content-row .ieee-photo-trigger {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: 220px;
+    min-width: 0;
+    margin: 0;
+}
+
+/* Keep the image inside its existing clickable thumbnail */
+#achievements .ieee-photo-trigger img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* Certificate stays underneath the row */
+#achievements .achievement-main .certificate-link {
+    display: inline-flex;
+    margin-top: 12px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    #achievements .achievement-content-row {
+        grid-template-columns: minmax(0, 1fr) 125px !important;
+        gap: 12px;
+    }
+
+    #achievements .achievement-content-row .ieee-photo-trigger {
+        width: 125px;
+    }
+
+    #achievements .achievement-content-row .achievement-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+#teamPhotoModal.team-photo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.94);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+#teamPhotoModal.team-photo-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#teamPhotoModal .neon-photo-frame {
+    width: min(850px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 12px;
+    background: #080808;
+    border: 1px solid #a6e22e;
+    box-shadow: 0 0 25px rgba(166, 226, 46, 0.3);
+}
+
+#teamPhotoModal .neon-photo-frame img {
+    display: block;
+    width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+}
+
+#teamPhotoModal .neon-photo-frame p {
+    color: #a6e22e;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#teamPhotoModal .team-photo-close {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    color: #a6e22e;
+    background: #111;
+    border: 1px solid #a6e22e;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* FIX ACHIEVEMENT ROW — DESCRIPTION LEFT, PHOTO RIGHT */
+
+#achievements .achievement-main .achievement-content-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 210px !important;
+    align-items: center !important;
+    column-gap: 30px !important;
+    width: 100% !important;
+}
+
+/* Description on the left */
+#achievements .achievement-main .achievement-content-row p.achievement-description {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 20px 0 !important;
+}
+
+/* Photo on the right */
+#achievements .achievement-main .achievement-content-row button.ieee-photo-trigger {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    align-self: center !important;
+    justify-self: end !important;
+    width: 210px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Keep image dimensions consistent */
+#achievements .ieee-photo-trigger img {
+    display: block !important;
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+}
+
+/* Certificate remains underneath both columns */
+#achievements .achievement-main > .certificate-link {
+    display: inline-flex !important;
+    margin-top: 12px !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #achievements .achievement-main .achievement-content-row {
+        grid-template-columns: minmax(0, 1fr) 115px !important;
+        column-gap: 12px !important;
+    }
+
+    #achievements .achievement-main .achievement-content-row button.ieee-photo-trigger {
+        width: 115px !important;
+    }
+}
+/* =====================================
+   FINAL ACHIEVEMENT LAYOUT POLISH
+===================================== */
+
+/* Reduce the gap below the hackathon heading */
+#achievements .achievement-heading {
+    margin-bottom: 8px !important;
+    padding-bottom: 0 !important;
+}
+
+/* Keep description and photo aligned */
+#achievements .achievement-content-row {
+    align-items: center !important;
+    gap: 24px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove excess paragraph spacing */
+#achievements .achievement-content-row .achievement-description {
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+}
+
+/* Neon-green photo border and subtle glow */
+#achievements .achievement-content-row .ieee-photo-trigger {
+    border: 1px solid #a6e22e !important;
+    border-radius: 4px !important;
+    box-shadow:
+        0 0 5px rgba(166, 226, 46, 0.35),
+        0 0 12px rgba(166, 226, 46, 0.12) !important;
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease !important;
+}
+
+/* Slightly brighter neon on hover */
+#achievements .achievement-content-row .ieee-photo-trigger:hover {
+    border-color: #c8ff50 !important;
+    box-shadow:
+        0 0 7px rgba(166, 226, 46, 0.65),
+        0 0 18px rgba(166, 226, 46, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Keep the certificate close to the description row */
+#achievements .achievement-main > .certificate-link {
+    margin-top: 8px !important;
+}
+
+/* Force VIEW TEAM button to use the neon theme */
+#achievements button.ieee-photo-trigger {
+    background: #080808 !important;
+    background-color: #080808 !important;
+    color: #a6e22e !important;
+    border: 1px solid #a6e22e !important;
+    border-radius: 4px !important;
+    padding: 6px !important;
+    box-shadow: 0 0 8px rgba(166, 226, 46, 0.18) !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+/* Keep the photo itself unchanged */
+#achievements button.ieee-photo-trigger img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+/* Make VIEW TEAM text neon green */
+#achievements button.ieee-photo-trigger span {
+    display: block !important;
+    background: transparent !important;
+    color: #a6e22e !important;
+    padding: 10px 0 4px !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+}
+
+/* Prevent white hover or focus backgrounds */
+#achievements button.ieee-photo-trigger:hover,
+#achievements button.ieee-photo-trigger:focus,
+#achievements button.ieee-photo-trigger:active {
+    background: #080808 !important;
+    color: #a6e22e !important;
+    border-color: #c8ff50 !important;
+    box-shadow: 0 0 14px rgba(166, 226, 46, 0.4) !important;
+}
+
+/* Fix portrait crop — show the full top of the head */
+.hero-portrait .portrait-image-wrapper {
+    overflow: hidden;
+}
+
+.hero-portrait .portrait-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center top !important;
+}
+
+
+/* Portrait: show more of the top of the head */
+.hero-portrait .portrait-frame {
+    overflow: visible !important;
+}
+
+.hero-portrait .portrait-image-wrapper {
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.hero-portrait .portrait-image-wrapper .portrait-image {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 10% !important;
+    transform: scale(0.94) !important;
+    transform-origin: center top !important;
+}
+
+/* Move portrait image down without resizing it */
+.hero-portrait .portrait-image-wrapper .portrait-image {
+    transform: translateY(18px) !important;
+    object-position: center top !important;
+}
+
+/* ABOUT — align detail labels and values */
+#about .about-details {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+}
+
+#about .about-detail {
+    display: grid !important;
+    grid-template-columns: 200px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 32px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 22px 24px !important;
+}
+
+#about .about-detail .detail-label {
+    display: block !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+#about .about-detail .detail-value {
+    display: block !important;
+    text-align: left !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    line-height: 1.6 !important;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 700px) {
+    #about .about-detail {
+        grid-template-columns: 110px minmax(0, 1fr) !important;
+        column-gap: 16px !important;
+        padding: 18px 14px !important;
+    }
+
+    #about .about-detail .detail-value {
+        overflow-wrap: anywhere;
+    }
+}
+
